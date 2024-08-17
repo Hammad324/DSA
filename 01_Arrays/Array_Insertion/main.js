@@ -34,7 +34,7 @@ function insertElement() {
     // error-eg: [60, 30, 10, 10, 67, 47] incase of index 2 and element 70
 
     for (let i = arr.length - 1; i >= position; i--) {
-        arr[i + 1] = arr[i];
+        arr[i + 1] = arr[i]; // put the value of the very next index in the current index
     }
     arr[position] = newElement;
     console.log(arr)

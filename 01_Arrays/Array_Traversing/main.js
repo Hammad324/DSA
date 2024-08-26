@@ -61,3 +61,23 @@ function getElement() {
 // For accessing values in an array we have to access the corresponding index values.
 
 // arr[0], arr[1], arr[10]
+
+// 2d Arrays 
+
+// forward treversal
+
+let arr2d = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+console.log('-------- 2d array forward treversal ---------')
+for (let i = 0; i < arr2d.length; i++) {
+    for (let j = 0; j < arr2d[i].length; j++) {
+        console.log(arr2d[i][j])
+    }
+}
+
+console.log('-------- 2d array backward treversal ---------')
+for (let i = arr2d.length - 1; i >= 0; i--) {
+    for (let j = arr2d[i].length - 1; j >= 0; j--) {
+        console.log(arr2d[i][j])
+    }
+}

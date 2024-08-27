@@ -64,20 +64,41 @@ function getElement() {
 
 // 2d Arrays 
 
-// forward treversal
+// Forward Traversal
 
 let arr2d = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-console.log('-------- 2d array forward treversal ---------')
-for (let i = 0; i < arr2d.length; i++) {
-    for (let j = 0; j < arr2d[i].length; j++) {
+console.log('-------- 2d array forward traversal ---------')
+for (let i = 0; i < arr2d.length; i++) { // loops through the outer array, can be called as the row
+    for (let j = 0; j < arr2d[i].length; j++) { // he expression arr2d[i].length - 1 refers to the last index of the current row (or sub-array)
         console.log(arr2d[i][j])
     }
 }
 
-console.log('-------- 2d array backward treversal ---------')
-for (let i = arr2d.length - 1; i >= 0; i--) {
-    for (let j = arr2d[i].length - 1; j >= 0; j--) {
+// Backward Traversal
+
+console.log('-------- 2d array backward traversal ---------')
+for (let i = arr2d.length - 1; i >= 0; i--) { // loops through the outer array in reverse order, we have used -1 since there is no relational operator so that it will not consider it infact it will give out of bounds error to cater this we use -1 which specifies that we need to start it fron the first index elese it will use the length of array
+    for (let j = arr2d[i].length - 1; j >= 0; j--) { // the loop starts backwards and iterates through every element in the internal array
         console.log(arr2d[i][j])
     }
 }
+
+// create a genralized function for forward and backward traversal for a 2d array
+
+function traverse2dArray(arr) {
+    // forward 
+    for (let i = 0; i < arr.length; i++) {
+        for (j = 0; j < arr[i].length; j++) {
+            console.log(arr[i][j]);
+        }
+    }
+    // backward
+    for (let i = arr.length - 1; i >= 0; i--) {
+        for (let j = arr[i].length - 1; j >= 0; j--) {
+            console.log(arr[i][j]);
+        }
+    }
+}
+
+traverse2dArray([[2, 4, 6], [8, 10 ,12]]);

@@ -29,3 +29,27 @@ function deleteElement() {
         console.log('Out of bounds / This is not a number')
     }
 }
+
+// element deletion in 2d array
+
+let arr2d = [[23, 43, 21], [93, 54, 26], [91, 56, 12]]
+const row = 1
+const rowIndex = 1; // remove 54
+
+for (let i = rowIndex; i < arr2d[row].length; i++) {
+    arr2d[row][i] = arr2d[row][i + 1];
+}
+arr2d[row].length--;
+console.log(arr2d)
+
+// create a function to delete an element from a 2d array
+
+function deleteElement (arr, row, rowIndex) {
+    for (i = rowIndex; i < arr[row].length; i++) {
+        arr[row][i] = arr[row][i + 1];
+    }
+    arr[row].length--;
+    console.log(arr)
+}
+
+deleteElement(arr2d, row, rowIndex)

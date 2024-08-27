@@ -36,10 +36,10 @@ let arr2d = [[23, 43, 21], [93, 54, 26], [91, 56, 12]]
 const row = 1
 const rowIndex = 1; // remove 54
 
-for (let i = rowIndex; i < arr2d[row].length; i++) {
-    arr2d[row][i] = arr2d[row][i + 1];
+for (let i = rowIndex; i < arr2d[row].length; i++) { // iterating through the row, use the index that you need to clear to initialize the loop
+    arr2d[row][i] = arr2d[row][i + 1]; // overwrite the current value with the next index value
 }
-arr2d[row].length--;
+arr2d[row].length--; // decreasing the length manually
 console.log(arr2d)
 
 // create a function to delete an element from a 2d array

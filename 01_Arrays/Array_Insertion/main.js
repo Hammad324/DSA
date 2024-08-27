@@ -81,6 +81,10 @@ for (let i = arr2d[internal_arr].length - 1; i >= internal_arr_index; i--) {
 arr2d[internal_arr][internal_arr_index] = value;
 console.log(arr2d) // [ [ 2, 200, 4, 6 ], [ 8, 10, 12 ] ]
 
+// by using splice 
+arr[internal_arr].splice(internal_arr_index, 0, 200)
+//console.log(arr)
+
 // create a generalized function to traverse and insert an element in a 2d array
 
 function insertElementin2dArray (arr, internal_arr, internal_arr_index, value) {

@@ -11,7 +11,12 @@ function selectionSort(arr) {
             }
         }
         // swaping the element at smallestIndex with the element at index i.
-        [arr[i], arr[smallestIndex]] = [arr[smallestIndex], arr[i]];
+        // creates a temporary array containing these values
+        [arr[i], arr[smallestIndex]] = [arr[smallestIndex], arr[i]]; // this part assigns them back arr[i] and arr[smallestIndex] effectively swaping them.
+        // can also be written as
+        // let temp = arr[i];
+        // arr[i] = arr[smallestIndex]
+        // arr[smallestIndex] = temp;
     }
     return arr;
 }
